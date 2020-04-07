@@ -1,5 +1,6 @@
 package com.hari.smackchat
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -42,8 +43,9 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-    fun loginButtonClicked(view:View) {
-
+    fun loginButtonNavClicked(view:View) {
+        val loginIntent= Intent(this,ActivityLogin::class.java)
+        startActivity(loginIntent)
     }
 
     fun addChannelClicked(view: View){
